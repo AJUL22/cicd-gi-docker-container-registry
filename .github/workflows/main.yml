@@ -83,8 +83,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.cicd-gi-docker-container-registry }}:${{ env.IMAGE_TAG }}
-            ${{ env.cicd-gi-docker-container-registry }}:latest
+            ${{ env.DOCKERHUB_REPO }}:${{ env.IMAGE_TAG }}
+            ${{ env.DOCKERHUB_REPO }}:latest
             ${{ env.GHCR_REPO }}:${{ env.IMAGE_TAG }}
             ${{ env.GHCR_REPO }}:latest
           # Build args (optional) - not required for this project but left as example
